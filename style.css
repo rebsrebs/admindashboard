@@ -8,13 +8,13 @@ body{
 /* COLOR VARIABLES */
 :root {
     /* Background color for sidebar and buttons - original was rgb(45, 154, 226) */
-    --dark-bgcolor: rgb(45, 154, 226);
+    --dark-bgcolor: rgb(226, 45, 129);
     /* Background color for search bar and main grid container - original was rgb(209, 225, 243); */
-    --medium-bgcolor: rgb(209, 225, 243);
+    --medium-bgcolor: rgb(243, 220, 209);
     /* Background color for header, main content boxes, sidebar text - original was white */
     --light-bgcolor:white;
-    /* Stripe on project box color - original was rgb(224, 177, 19)*/
-    --stripe-color: rgb(224, 177, 19);
+    /* Stripe on project box color - original was rgb(224, 177, 19) - also (19, 224, 104) is interesting*/
+    --stripe-color: rgb(19, 224, 197);
    /* Medium text color for paragraphs - original was gray*/
    --med-text-color:gray;
    /* Border bottom line color for between announcements - original was light gray - 
@@ -46,6 +46,7 @@ p{
 
 
 /* SIDE BAR START*/
+/* Do I still need to make width responsive? */
 .sidebar{
     grid-area: 1 / 1 / 3 / 2;
     padding:30px 15px 30px 15px;
@@ -97,7 +98,7 @@ p{
     grid-template-rows: 1fr;
     grid-template-columns:1fr;
     box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.2);
-    gap:5px;
+    gap:12px;
 }
 
 #headertoprow{
@@ -152,7 +153,7 @@ p{
 
 button{
     background-color: var(--dark-bgcolor);
-    border-radius:18px;
+    border-radius:35px;
     border-style:none;
     height:3em;
     padding:0px 2em 0px 2em;
