@@ -5,20 +5,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* H2-H5 only have bottom margin. */
 h2, h3, h4, h5{
     margin:0px 0px .5em 0px;
 }
 
+/* Remove margin from paragraph */
 p{
     margin:0px;
 }
 
 
-/* container for whole design 
-two columns
-two rows
-side bar takes up both rows */
-
+/* Container for entire desigs, made up of two columns and two rows */
 .maingridcontainer{
     display:grid;
     grid-template-columns: minmax(250px,1fr) 5fr;
@@ -28,9 +26,7 @@ side bar takes up both rows */
 }
 
 
-/* side bar 
-takes up one column and two rows 
-contains two columns and 12 rows */
+/* SIDE BAR START*/
 .sidebar{
     grid-area: 1 / 1 / 3 / 2;
     padding:30px 15px 30px 15px;
@@ -45,12 +41,85 @@ contains two columns and 12 rows */
     align-items:center;
 }
 
-.rightgridbox h5{
-    font-size:14px;
+.sidebarlink{
+    font-size:18px;
+    font-weight:bold;
 }
 
-#dashboardheader{
+.sidebaricon{
+    width:15px;
+    color:white;
+}
+
+#dashboardlogo{
+    width:22px;
+}
+
+.sidebarspacer{
+    grid-column:1 / span 2;
+    height:10px;
+}
+
+#sidebarheader{
     margin:0px;
+}
+
+/* SIDEBAR END*/
+
+
+
+/* HEADER START */
+/* header grid container has two rows */
+.header{
+    padding:15px 30px 15px 30px;
+    grid-area: 1 / 2 / 2 / 3;
+    background-color:white;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:1fr;
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.2);
+    gap:5px;
+}
+
+#headertoprow{
+    grid-area: 1 / 1 / 2 / 2;
+    display:grid;
+    gap:5px;
+    width:100%;
+    grid-row: 1 / 2;
+    grid-template-columns: 25px 3fr auto auto 20ch;
+    align-items:center;
+}
+
+#headerbottomrow{
+    grid-area: 2 / 1 / 3 / 2;
+    width:100%;
+    display:grid;
+    gap:5px;
+    grid-row: 2 / 3;
+    grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
+    align-items:center;
+}
+
+.headergriditem{
+    margin-right:10px;
+}
+
+.header img, .header button{
+    align-self:center;
+}
+
+.tinytext{
+    font-size:12px;
+}
+
+.smallusername {
+    font-weight:bold;
+}
+
+.bigusername{
+    font-size:22px;
+    font-weight:600;
 }
 
 .searchbar{
@@ -72,100 +141,23 @@ button{
     font-weight:bold;
 }
 
-.headergriditem{
-    margin-right:10px;
+.avatar{
+    border-radius: 50%;
 }
 
-/* header takes up second column and first row 
-has two rows */
-.header{
-    padding:15px 30px 15px 30px;
-grid-area: 1 / 2 / 2 / 3;
-background-color:white;
-display:grid;
-grid-template-rows: 1fr;
-grid-template-columns:1fr;
-box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.2);
-gap:10px;
+.smallavatar{
+    width:35px;
 }
 
-.header img, .header button{
-    align-self:center;
+.mediumavatar{
+    width:60px;
 }
 
-
-.tinytext{
-    font-size:12px;
-}
-
-#headertoprow{
-    grid-area: 1 / 1 / 2 / 2;
-display:grid;
-gap:5px;
-width:100%;
-grid-row: 1 / 2;
-grid-template-columns: 25px 3fr auto auto 20ch;
-align-items:center;
-}
-
-#headerbottomrow{
-    grid-area: 2 / 1 / 3 / 2;
-    width:100%;
-display:grid;
-gap:5px;
-grid-row: 2 / 3;
-/* grid-template-columns: auto 25ch 1fr 1fr 1fr; */
-grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
-align-items:center;
-}
+/* HEADER END */
 
 
+/* MAIN CONTENT START */
 
-.smallusername {
-    font-weight:bold;
-}
-
-.bigusername{
-    font-size:22px;
-    font-weight:600;
-}
-
-/* .dashboardicon, .dashboardlink{
-    background-color:pink;
-} */
-
-.dashboardlink{
-    font-size:18px;
-    font-weight:bold;
-}
-
-
-.dashboardicon{
-    width:15px;
-    color:white;
-    /* align-self:center;
-    justify-self:center; */
-}
-
-#dashboardlogo{
-    width:22px;
-}
-
-.sidebarspacer{
-    grid-column:1 / span 2;
-    height:10px;
-}
-
-
-
-
-.maincontentheader{
-    margin-top:15px;
-}
-
-
-/* MAIN CONTENT AREA
-Has two columns and two rows. */
 .contentgridcontainer{
     grid-area: 2 / 2 / 3 / 3;
     background-color: rgb(209, 225, 243);
@@ -178,10 +170,14 @@ Has two columns and two rows. */
     gap:15px;
 }
 
+.maincontentheader{
+    margin-top:15px;
+}
 
 .contentgridcontainer p{
     color:gray;
 }
+
 
 /* YOUR PROJECTS
 contains all the project boxes
@@ -194,21 +190,35 @@ takes up one column, two rows*/
     gap:15px;
 }
 
-
-
 .projectbox{
-background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
-  background-size: 8px 100%;
-  background-repeat: no-repeat;
-  background-position: 0%;
-  display:grid;
-  grid-template-rows:auto auto auto;
-  align-content:center;
-}  
+    background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
+    background-size: 8px 100%;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    display:grid;
+    grid-template-rows:auto auto auto;
+    align-content:center;
+    }  
 
 .projectboxiconrow{
     margin-top:20px;
 }
+
+#yourprojectsheading{
+    grid-area:1 / 1 / 2 / 3;
+}
+
+.projectboxiconrow{
+    text-align:end;
+}
+
+.projectboxicon{
+    margin:5px 5px 0px 0px;
+}
+
+
+
+/* RIGHT INNER SIDE BAR- ANNOUNCEMENTS + TRENDING */
 
 
 /* takes up second column and one row */
@@ -220,8 +230,8 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     gap:15px;
 }
 
-#yourprojectsheading{
-    grid-area:1 / 1 / 2 / 3;
+.rightgridbox h5{
+    font-size:14px;
 }
 
 .rightgridbox, .projectbox{
@@ -231,25 +241,7 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     background-color: white;
 }
 
-.avatar{
-        border-radius: 50%;
-}
-
-.smallavatar{
-    width:35px;
-}
-
-.mediumavatar{
-    width:60px;
-}
-
-.projectboxiconrow{
-    text-align:end;
-}
-
-.projectboxicon{
-    margin:5px 5px 0px 0px;
-}
+/* ANNOUNCEMENTS */
 
 #announcementbox{
     display:grid;
@@ -257,7 +249,6 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     grid-template-rows: repeat(6,auto);
     font-size:14px;
     padding:20px;
-    
 }
 
 .announcementtext{
@@ -274,6 +265,10 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     margin-top:20px;
 }
 
+/* END ANNOUNCEMENTS */
+
+
+/* TRENDING */
 #trendingbox{
     display:grid;
     grid-template-rows: repeat(8,1fr);
@@ -281,7 +276,6 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     align-items:center;
     align-content:center;
     font-size:14px;
-  
 }
 
 .trendingavatar{
@@ -296,3 +290,7 @@ margin-bottom:0px;
 .trendingdescription{
   margin-bottom:10px;  
 }
+
+/* END TRENDING */
+
+/* END RIGHT INNER SIDEBAR */
