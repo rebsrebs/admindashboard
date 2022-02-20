@@ -59,6 +59,7 @@ contains two columns and 12 rows */
     border-radius:12px;
     font-size:18px;
     height:1.5em;
+    width:80%;
 }
 
 button{
@@ -85,10 +86,16 @@ display:grid;
 grid-template-rows: 1fr;
 grid-template-columns:1fr;
 box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.2);
+gap:10px;
 }
 
+.header img, .header button{
+    align-self:center;
+}
+
+
 .tinytext{
-    font-size:10px;
+    font-size:12px;
 }
 
 #headertoprow{
@@ -172,6 +179,10 @@ Has two columns and two rows. */
 }
 
 
+.contentgridcontainer p{
+    color:gray;
+}
+
 /* YOUR PROJECTS
 contains all the project boxes
 takes up one column, two rows*/
@@ -181,8 +192,9 @@ takes up one column, two rows*/
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px repeat(3,auto);
     gap:15px;
-   
 }
+
+
 
 .projectbox{
 background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
@@ -251,7 +263,15 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
 .announcementtext{
     padding-bottom:15px;
     margin-bottom:10px;
-    border-bottom:1px solid black;
+    /* border-bottom:1px solid black; */
+}
+
+#announcement-1, #announcement-2{
+    border-bottom:1px solid lightgray;
+}
+
+.announcement{
+    margin-top:20px;
 }
 
 #trendingbox{
@@ -260,6 +280,7 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
     grid-template-columns: auto 1fr;
     align-items:center;
     align-content:center;
+    font-size:14px;
   
 }
 
@@ -269,7 +290,6 @@ background-image: linear-gradient(rgb(224, 177, 19), rgb(224, 177, 19));
 }
 
 .trendingusername{
-font-weight:bold;
 margin-bottom:0px;
 }
 
