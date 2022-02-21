@@ -7,12 +7,12 @@ body{
 
 /* COLOR VARIABLES */
 :root {
-    /* Background color for sidebar and buttons - original was rgb(45, 154, 226) */
-    --dark-bgcolor: rgb(226, 45, 129);
+    /* Background color for sidebar and buttons - original was rgb(45, 154, 226) and then rgb(226, 45, 129)*/
+    --dark-bgcolor: rgb(226, 45, 116);
     /* Background color for search bar and main grid container - original was rgb(209, 225, 243); */
     --medium-bgcolor: rgb(243, 220, 209);
     /* Background color for header, main content boxes, sidebar text - original was white */
-    --light-bgcolor:white;
+    --light-bgcolor:rgb(255, 255, 255);
     /* Stripe on project box color - original was rgb(224, 177, 19) - also (19, 224, 104) is interesting*/
     --stripe-color: rgb(19, 224, 197);
    /* Medium text color for paragraphs - original was gray*/
